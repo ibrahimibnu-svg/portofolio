@@ -41,7 +41,7 @@ const About = () => {
             <div className={styles.profileInfo}>
               <h3 className={styles.profileName}>Ibrahim Ibnu Abbas</h3>
               <p className={styles.profileDesc}>
-                Siswa SMA HSI Boarding School yang passionate dalam dunia programming dan pengembangan teknologi. Selalu antusias mencoba hal-hal baru.
+                Siswa SMA HSI Boarding School yang bersemangat dalam dunia programming dan pengembangan teknologi. Selalu antusias mencoba hal-hal baru.
               </p>
             </div>
           </div>
