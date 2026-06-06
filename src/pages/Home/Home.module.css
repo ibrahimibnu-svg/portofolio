@@ -1,0 +1,245 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.gridBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(var(--accent-blue-transparent) 1px, transparent 1px),
+    linear-gradient(90deg, var(--accent-blue-transparent) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+.gridBackground::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, transparent 0%, var(--bg-primary) 70%);
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.leftColumn {
+  flex: 1;
+  max-width: 600px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-blue);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.name {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.typingContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  min-height: 1.6rem;
+}
+
+.typingText {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.3em;
+  background: var(--accent-blue);
+  margin-left: 3px;
+  animation: blink 0.8s step-end infinite;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 480px;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.btnPrimary,
+.btnSecondary {
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnPrimary {
+  background: var(--accent-blue);
+  color: white;
+  border: none;
+}
+
+.btnPrimary:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--glow-blue);
+}
+
+.btnSecondary {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1.5px solid var(--border);
+}
+
+.btnSecondary:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.rightColumn {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatarCard {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px var(--glow-blue);
+  margin-bottom: 2rem;
+}
+
+.avatarText {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 4px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 968px) {
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+    padding-top: 5rem;
+  }
+
+  .leftColumn {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .ctaGroup {
+    justify-content: center;
+  }
+
+  .rightColumn {
+    width: 100%;
+  }
+
+  .avatarCard {
+    width: 200px;
+    height: 200px;
+  }
+
+  .avatarText {
+    font-size: 3.5rem;
+  }
+
+  .name {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 1.6rem;
+  }
+
+  .ctaGroup {
+    flex-direction: column;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .avatarCard {
+    width: 160px;
+    height: 160px;
+  }
+
+  .avatarText {
+    font-size: 2.8rem;
+  }
+}

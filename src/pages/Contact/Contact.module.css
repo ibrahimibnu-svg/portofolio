@@ -1,0 +1,207 @@
+.contact {
+  min-height: 100vh;
+  padding: 6rem 2rem 2rem;
+  background: var(--bg-primary);
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px var(--glow-blue);
+}
+
+.infoSection {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.socialBtn {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  transition: var(--transition-fast);
+}
+
+.socialBtn:hover {
+  background: var(--accent-blue);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px var(--glow-blue);
+}
+
+.formSection {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: var(--bg-secondary);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  background: var(--bg-primary);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitBtn {
+  padding: 1rem 1.5rem;
+  background: var(--accent-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  box-shadow: 0 0 20px var(--glow-blue);
+}
+
+.submitBtn:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+.guestbookSection {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.guestbookHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.guestbookHeader .sectionTitle {
+  margin-bottom: 0;
+}
+
+.deleteBtn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.deleteBtn:hover {
+  background: #ff6b6b;
+  color: white;
+}
+
+.guestList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.guestCard {
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.guestHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.guestName {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.guestDate {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.guestMessage {
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .infoSection {
+    flex-direction: column;
+  }
+
+  .infoSection {
+    gap: 0.75rem;
+  }
+
+  .guestbookHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
