@@ -1,14 +1,15 @@
-import coding1 from '../assets/gambar-coding1.jpg';
-import coding2 from '../assets/gambar-coding2.jpg';
-import coding3 from '../assets/gambar-coding3.jpg';
-import orgNgajar from '../assets/gambar-org-ngajar.jpg';
-import quranImg from '../assets/gambar quran.jpeg';
+import coding1 from "../assets/gambar-coding1.jpg";
+import coding2 from "../assets/gambar-coding2.jpg";
+import coding3 from "../assets/gambar-coding3.jpg";
+import orgNgajar from "../assets/gambar-org-ngajar.jpg";
+import quranImg from "../assets/gambar quran.jpeg";
 
 export const itProjects = [
   {
     id: 1,
     title: "Aplikasi Card",
-    description: "Project aplikasi card menggunakan HTML, CSS, dan JavaScript.",
+    description:
+      "aplikasi kartu digital yang dapat menampilkan informasi pengguna secara rapi dan menarik, sekaligus melatih kemampuan dalam mengelola komponen, props, dan desain antarmuka menggunakan React",
     image: coding1,
     tech: ["HTML", "CSS", "JavaScript"],
     link: "https://aplikasi-card.vercel.app/",
@@ -16,7 +17,8 @@ export const itProjects = [
   {
     id: 2,
     title: "To-Do List",
-    description: "Project to-do-list interaktif menggunakan React.",
+    description:
+      "aplikasi pencatat tugas untuk membantu pengguna mengelola aktivitas sehari-hari agar lebih terorganisir, serta melatih penerapan state management dan manipulasi data pada React.",
     image: coding2,
     tech: ["React", "CSS"],
     link: "https://aplikasi-todo-list-mu.vercel.app/",
@@ -24,7 +26,8 @@ export const itProjects = [
   {
     id: 3,
     title: "Dashboard",
-    description: "Project dashboard dengan desain modern.",
+    description:
+      "dashboard yang dapat menampilkan dan mengelola data proyek dalam satu tampilan terpusat sehingga informasi menjadi lebih mudah dipantau dan dikelola oleh pengguna.",
     image: coding3,
     tech: ["React", "CSS"],
     link: "https://dashboard-eight-ashen-56.vercel.app/",
